@@ -1,0 +1,82 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Ajouté pour éviter que le contenu touche les bords sur petits écrans */
+    margin: 20px 20px;
+    row-gap: 40px ;
+    column-gap: 20px;
+}
+
+.popular h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center; /* Centrer le texte pour petits écrans */
+}
+
+.popular hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.popular-item {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Par défaut, 4 colonnes */
+    gap: 30px;
+    width: 100%; /* Pour occuper toute la largeur disponible */
+}
+
+.popular-item img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover; 
+}
+
+/* Styles responsives */
+@media (max-width: 1200px) {
+    .popular h1 {
+        font-size: 40px;
+    }
+
+    .popular-item {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur écrans moyens */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .popular h1 {
+        font-size: 35px;
+    }
+
+    .popular hr {
+        width: 150px;
+        height: 5px;
+    }
+
+    .popular-item {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablettes */
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popular h1 {
+        font-size: 30px;
+    }
+
+    .popular hr {
+        width: 100px;
+        height: 4px;
+    }
+
+    .popular-item {
+        grid-template-columns: 1fr; /* 1 colonne sur téléphones */
+        gap: 10px;
+    }
+}

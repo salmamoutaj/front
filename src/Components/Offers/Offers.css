@@ -1,0 +1,104 @@
+.offers{
+    width: 65%;
+    height: 60vh;
+    display: flex;
+    margin: auto;
+    padding: 0px 140px;
+    margin-bottom: 150px;
+    background: linear-gradient(180deg, #1692a8ab 0%, #e1ffea22 60%);
+    animation: fadeIn 1s ease-in-out;
+}
+.offers-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeInLeft 1s ease-in-out;
+}
+.offers-left h1{
+    color: #171717;
+    font-size: 80px;
+    font-weight: 600;
+}
+.offers-left p{
+    color: #171717;
+    font-size: 22px;
+    font-weight: 400;
+}
+.offers-left button{
+    width: 282px;
+    height: 70px;
+    border-radius: 35px;
+    background: black;
+    border: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.offers-right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top:50px ;
+    animation: fadeInRight 1s ease-in-out;
+}
+/* Animation fadeIn pour la section gauche */
+@keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Animation fadeIn pour la section droite */
+@keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+
+/* Mobile - Tablette */
+@media (max-width: 768px) {
+    .offers {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .offers-left h1 {
+        font-size: 40px;
+    }
+    .offers-left p {
+        font-size: 18px;
+    }
+    .offers-left button {
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+    }
+    .offers-right img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Petit mobile */
+@media (max-width: 480px) {
+    .offers {
+        padding: 0 10px;
+    }
+    .offers-left h1 {
+        font-size: 30px;
+    }
+    .offers-left p {
+        font-size: 16px;
+    }
+    .offers-left button {
+        width: 180px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .offers-right img {
+        width: 90%;
+        height: auto;
+    }
+}
